@@ -1,0 +1,346 @@
+{
+	"info": {
+		"_postman_id": "1f12d9de-cd18-4e3f-a25b-9c4fae63b36e",
+		"name": "HWG",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33284494"
+	},
+	"item": [
+		{
+			"name": "books api",
+			"item": [
+				{
+					"name": "Get all book",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local-laravel}}/api/book",
+							"host": [
+								"{{local-laravel}}"
+							],
+							"path": [
+								"api",
+								"book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get specific book",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local-laravel}}/api/book/{{$id}}",
+							"host": [
+								"{{local-laravel}}"
+							],
+							"path": [
+								"api",
+								"book",
+								"{{$id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store new book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"The Great Gatsby\",\n    \"author\": \"F. Scott Fitzgerald\",\n    \"category_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local-laravel}}/api/book",
+							"host": [
+								"{{local-laravel}}"
+							],
+							"path": [
+								"api",
+								"book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update spesific book",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"The Great Gatsby 2\",\n    \"author\": \"Alif\",\n    \"category_id\": 1,\n    \"available\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local-laravel}}/api/book/{{$id}}",
+							"host": [
+								"{{local-laravel}}"
+							],
+							"path": [
+								"api",
+								"book",
+								"{{$id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete specific book",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local-laravel}}/api/book/{{$id}}",
+							"host": [
+								"{{local-laravel}}"
+							],
+							"path": [
+								"api",
+								"book",
+								"{{$id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category api",
+			"item": [
+				{
+					"name": "Get all categories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local-laravel}}/api/categories",
+							"host": [
+								"{{local-laravel}}"
+							],
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get specific category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local-laravel}}/api/categories/{{id}}",
+							"host": [
+								"{{local-laravel}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store new category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Comedy\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local-laravel}}/api/categories",
+							"host": [
+								"{{local-laravel}}"
+							],
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update spesific category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Lawak\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local-laravel}}/api/categories/{{$id}}",
+							"host": [
+								"{{local-laravel}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"{{$id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete specific category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local-laravel}}/api/categories/{{$id}}",
+							"host": [
+								"{{local-laravel}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"{{$id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "loan api",
+			"item": [
+				{
+					"name": "borrow book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"book_id\" : 1,\n    \"user_id\" : 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local-laravel}}/api/loan/borrow",
+							"host": [
+								"{{local-laravel}}"
+							],
+							"path": [
+								"api",
+								"loan",
+								"borrow"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "return book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"book_id\" : 1,\n    \"user_id\" : 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local-laravel}}/api/loan/return",
+							"host": [
+								"{{local-laravel}}"
+							],
+							"path": [
+								"api",
+								"loan",
+								"return"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loan list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local-laravel}}/api/loan/{{$user_id}}",
+							"host": [
+								"{{local-laravel}}"
+							],
+							"path": [
+								"api",
+								"loan",
+								"{{$user_id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
