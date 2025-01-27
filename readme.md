@@ -1,5 +1,3 @@
-# SOAL BACKEND
-> https://github.com/HWGroup-ID/soal-interview/blob/main/backend.md
+# Postman Collection
 
-# PRETEST
-> https://github.com/HWGroup-ID/soal-interview/blob/main/Pretest.md
+> library-api.postman_collection.json
